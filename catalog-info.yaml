@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pr-pe-code-review
+  description: A python application as a test component named - pr-pe-code-review
+  annotations:
+    github.com/project-slug: kezri-29/pr-pe-code-review
+    backstage.io/techdocs-ref: dir:.
+    scorecard/jsonDataUrl: https://raw.githubusercontent.com/kezri-29/pr-pe-code-review/refs/heads/main/component-score.json
+    argocd/app-name: pr-pe-code-review
+spec:
+  type: service
+  owner: development
+  lifecycle: experimental

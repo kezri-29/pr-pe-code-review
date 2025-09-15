@@ -1,0 +1,15 @@
+site_name: 'pr-pe-code-review'
+site_description: 'Main documentation for pr-pe-code-review'
+repo_url: https://github.com/kezri-29/pr-pe-code-review
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+  # - redirects:
+  #     redirect_maps:
+  #       'index.md': 'overview/what-is-backstage.md'
+
+# For sidebar navigation on https://backstage.io/, see `microsite/sidebars.js`
+nav:
+  - Overview:
+      - Getting Started: 'docs/index.md'
