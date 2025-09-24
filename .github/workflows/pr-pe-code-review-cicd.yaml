@@ -54,6 +54,7 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: "Update values.yaml with commit ID - ${{needs.ci.outputs.commit_id}}"
+          pull: '--rebase' 
 
     # need to install argocd cli inorder to connect to the argocd server for deployment
       - name: Install ArgoCD
@@ -97,5 +98,6 @@ jobs:
           argocd app sync pr-pe-code-review
 
           argocd app wait pr-pe-code-review --timeout 180
+
 
 
