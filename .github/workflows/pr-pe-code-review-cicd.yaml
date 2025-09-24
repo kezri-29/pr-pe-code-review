@@ -49,7 +49,9 @@ jobs:
           pip install yq
           yq -Yi '.image.tag = "${{needs.ci.outputs.commit_id}}"' charts/pr-pe-code-review/values-dev.yaml
 
+    # adding this step to pull all the pushes and maintain proper branch
       - name: Set up Git authentication
+        shell: bash
         run: |
           git remote set-url origin https://x-access-token:${{ secrets.HUB_TOKEN }}@github.com/${{ github.repository }}.git
 
