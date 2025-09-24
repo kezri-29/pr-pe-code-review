@@ -12,7 +12,7 @@ def infoUrl():
         'message': 'Hello, this is a sample Python Flask application.',
         'deployment': 'kubernetes',
         'env' : 'dev',
-        'app_name': 'pr-pe-code-review-analysis'
+        'app_name': 'pr-pe-code-review-analysis-1'
     })
 
 @app.route('/api/v1/healthz')
@@ -24,4 +24,5 @@ if __name__ == '__main__':
 
 # '/api/v1/details --> basic details of the application'
 # '/api/v1/healthz --> for checking kubernetes health'
+
 
