@@ -49,6 +49,10 @@ jobs:
           pip install yq
           yq -Yi '.image.tag = "${{needs.ci.outputs.commit_id}}"' charts/pr-pe-code-review/values-dev.yaml
 
+      - name: Set up Git authentication
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.HUB_TOKEN }}@github.com/${{ github.repository }}.git
+
     # pushing changes to the github repo before syncing the argocd pipeline
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
