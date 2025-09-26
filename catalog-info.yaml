@@ -8,6 +8,9 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     scorecard/jsonDataUrl: https://raw.githubusercontent.com/kezri-29/pr-pe-code-review/refs/heads/main/component-score.json
     argocd/app-name: pr-pe-code-review
+    jira_key: DE
+    sonar_key: project-mdm-gdsn-ui
+    syscoscore.io/enabled: "true"
 spec:
   type: service
   owner: development
